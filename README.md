@@ -9,3 +9,5 @@ User Stories (initial list):
 - As a PlayLater user/owner, I want to specify to the script/program the minimum length episode to record -- so that I can record both clips and full episodes if I'd like, or I can just record full episodes
 - As a PlayLater user/owner, I want the script/program to send me an email whenever a record command is issued (if I choose to receive such emails) -- so that I can know that the script/program is doing its job
 - As a PlayLater user/owner, I want the script/program to send me an email whenever it scans the list of episodes for my list of shows I like (if I choose to receive such emails) -- so that I can know that the script/program is doing its job
+
+Please leave comments either in the GitHub "Issues" section ( https://github.com/theschles/PlayOnSeasonPass/issues ) or at the online support desk ( https://playonseasonpass.helprace.com/ )
