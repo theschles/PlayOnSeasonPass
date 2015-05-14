@@ -53,28 +53,28 @@ class SeasonPass {
         return $viewableEpisodes;
     }
 
-    function addNewlyRecordedEpisodesToEpisodeList($alreadyDownloadedEpisodes,$listOfEpisodesToDownload) {
+    function addNewlyRecordedEpisodesToEpisodeList(array $alreadyDownloadedEpisodes,array $listOfEpisodesToDownload) {
         return $alreadyDownloadedEpisodes;
     }
 
 
-    function filterOutAlreadyDownloadedEpisodesFromAvailableEpisodes($viewableEpisodesArray,$alreadyDownloadedEpisodes) {
-        return $viewableEpisodesArray;
+    function filterOutAlreadyDownloadedEpisodesFromAvailableEpisodes(array $viewableEpisodes,array $alreadyDownloadedEpisodes) {
+        return $viewableEpisodes;
     }
 
-    function recordNewEpisodes($listOfEpisodesToDownload) {
+    function recordNewEpisodes(array $listOfEpisodesToDownload) {
         return true;
     }
 
 
 
     /**
-     * @param $recordCommandSuccess
-     * @param $alreadyDownloadedEpisodes
-     * @param $listOfEpisodesToDownload
+     * @param bool $recordCommandSuccess
+     * @param array $alreadyDownloadedEpisodes
+     * @param array $listOfEpisodesToDownload
      * @throws Exception
      */
-    function processResultOfSendingRecordCommands($recordCommandSuccess, $alreadyDownloadedEpisodes, $listOfEpisodesToDownload)
+    function processResultOfSendingRecordCommands($recordCommandSuccess, array $alreadyDownloadedEpisodes, array $listOfEpisodesToDownload)
     {
         if ($recordCommandSuccess !== false) {
             $updatedEpisodeList = $this->addNewlyRecordedEpisodesToEpisodeList($alreadyDownloadedEpisodes, $listOfEpisodesToDownload);
@@ -100,10 +100,10 @@ class SeasonPass {
     }
 
     /**
-     * @param $child
+     * @param SimpleXMLElement $child
      * @return mixed
      */
-    public function getAddToQueueHREF($child)
+    public function getAddToQueueHREF(SimpleXMLElement $child)
     {
         return $child->attributes()['href']->__toString();
     }

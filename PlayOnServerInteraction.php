@@ -71,6 +71,10 @@ class PlayOnServerInteraction {
         return $resultXML;
     }
 
+    public static function recordEpisode(array $episodeData) {
+        
+    }
+
     /**
      * @return SimpleXMLElement
      */
