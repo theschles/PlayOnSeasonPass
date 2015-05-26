@@ -29,6 +29,7 @@ class SeasonPass {
     public function initialSetup() {
         Utility::setURL($this->url);
         PlayOnServerInteraction::setURL($this->url);
+        Logger::initialSetup();
     }
 
     function findViewableEpisodes(SimpleXMLElement $xml)
